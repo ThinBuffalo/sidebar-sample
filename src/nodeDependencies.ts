@@ -41,7 +41,8 @@ export class DepNodeProvider implements vscode.TreeDataProvider<Dependency> {
 	/**
 	 * Given the path to package.json, read all its dependencies and devDependencies.
 	 */
-	private getDepsInPackageJson(packageJsonPath: string): Dependency[] {
+	//Given the path to package.json, read all its dependencies and devDependencies.
+	 private getDepsInPackageJson(packageJsonPath: string): Dependency[] {
 		if (this.pathExists(packageJsonPath)) {
 			const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
 
